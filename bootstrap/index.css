@@ -142,6 +142,10 @@ h2 {
     }
 }
 
+img {
+    object-fit: cover;
+}
+
 
 /* grid activity 1 */
 
