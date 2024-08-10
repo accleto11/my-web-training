@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
@@ -14,11 +16,18 @@ h2 {
 .activity2 {
     border: 1px solid black;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .activity2 > div {
     height: 100px;
-    margin-bottom: 15px;
+    margin: 5px;
+}
+
+.activity2 > div > div {
+    padding: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .brown {
@@ -53,19 +62,19 @@ h2 {
     margin-top: -100px;
 }
 
-.yellow-green {
-    background-color: yellowgreen;
+.orange {
+    background-color: orange;
     height: 100px;
 }
 
 .blue {
-    background-color: lightseagreen;
-    height: 200px;
+    background-color: blue;
+    height: 100px;
 }
 
 .purple {
     background-color: purple;
-    height: 200px;
+    height: 100px;
 }
 
 .green {
@@ -73,6 +82,68 @@ h2 {
     height: 100px;
 }
 
+.blue-extended {
+    background-color: blue;
+    height: 200px;
+    margin-top: -100px;
+}
+
+.purple-extended {
+    background-color: purple;
+    height: 200px;
+    margin-top: -100px;
+}
+
+/* Media Queries for Smaller Screens */
+
+@media (max-width: 768px) {
+
+    .activity2 > div{
+        width: 100%;
+        height: auto;
+    }
+
+    .activity2 > div > div {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .yellow-extended, .violet-extended, .blue-extended, .purple-extended {
+        display: none;
+    }
+
+    .brown-wrapper, .yellow-wrapper, .violet-wrapper, .pink-wrapper, .orange-wrapper, .green-wrapper, .blue-wrapper, .purple-wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .activity2 > div{
+        width: 100%;
+        height: auto;
+    }
+
+    .activity2 > div > div {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .yellow-extended, .violet-extended, .blue-extended, .purple-extended {
+        display: none;
+    }
+
+    .brown-wrapper, .yellow-wrapper, .violet-wrapper, .pink-wrapper, .orange-wrapper, .green-wrapper, .blue-wrapper, .purple-wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+/* grid activity 1 */
 
 .jsstart div, .alignStart div {
     background-color: pink;
