@@ -4,8 +4,406 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+    <h1>All Breakpoints Sample</h1>
+    <h2>Container and Container Fluid</h2>
+    <div class="container-fluid bg-danger">Container Fluid</div>
+    <div class="container bg-warning">Container</div>
+
+    <h2>Sample Bootstrap Grid Activity 2</h2>
+    <div class="container activity2">
+    <div class="row">
+        <div class="col-9 brown">Brown</div>
+        <div class="col-3 yellow-wrapper">
+            <div class="yellow"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2 violet-wrapper">
+            <div class="violet"></div>
+        </div>
+        <div class="col-7 pink">Pink</div>
+        <div class="col-3">
+            <div class="yellow-extended">yellow</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2">
+            <div class="violet-extended">Violet</div>
+        </div>
+        <div class="col-2 yellow-green">Yellow Green</div>
+        <div class="col-4 blue-wrapper">
+            <div class="blue"></div>
+        </div>
+        <div class="col-4 purple-wrapper">
+            <div class="purple"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 green">Green</div>
+        <div class="col-4">
+            <div class="blue-extended">Blue</div>
+        </div>
+        <div class="col-4">
+            <div class="purple-extended">purple</div>
+        </div>
+    </div>
+</div>
+
     
+    <h2>Sample Bootstrap Grid Activity 1</h2>
+    <div class="container text-center gridActivity">
+        <div class="row">
+            <div class="col-1 bg-primary">col1</div>
+            <div class="col-1 bg-success">col2</div>
+            <div class="col-1 bg-warning">col3</div>
+            <div class="col-1 bg-primary">col4</div>
+            <div class="col-1 bg-success">col5</div>
+            <div class="col-1 bg-warning">col6</div>
+            <div class="col-1 bg-primary">col7</div>
+            <div class="col-1 bg-success">col8</div>
+            <div class="col-1 bg-warning">col9</div>
+            <div class="col-1 bg-primary">col10</div>
+            <div class="col-1 bg-success">col11</div>
+            <div class="col-1 bg-warning">col12</div>
+        </div>
+        <div class="row">
+            <div class="col-4 bg-primary">1 of 3</div>
+            <div class="col-4 bg-success">2 of 3</div>
+            <div class="col-4 bg-warning">3 of 3</div>
+        </div>
+        <div class="row">
+            <div class="col-4 bg-primary">col-4</div>
+            <div class="col-8 bg-success">col-8 </div>
+        </div>
+        <div class="row">
+            <div class="col-6 bg-primary">col-6</div>
+            <div class="col-6 bg-success">col-6</div>
+        </div>
+        <div class="row">
+            <div class="col-12 bg-primary">col-12</div>
+        </div>
+    </div>
+
+    <h2>Equal width</h2>
+    <div class="container text-center">
+        <div class="row border border-success">
+          <div class="col">
+            1 of 2
+          </div>
+          <div class="col">
+            2 of 2
+          </div>
+        </div>
+        <div class="row border border-success">
+          <div class="col">
+            1 of 3
+          </div>
+          <div class="col">
+            2 of 3
+          </div>
+          <div class="col">
+            3 of 3
+          </div>
+        </div>
+      </div>
+
+      <h2>Sample 2 with Breakpoints</h2>
+
+      <div class="container text-center">
+        <div class="row border border-success">
+          <div class="col-sm-6 border">
+            1 of 2 (col-sm-6)
+          </div>
+          <div class="col-sm-6 border">
+            2 of 2 (col-sm-6)
+          </div>
+        </div>
+        <div class="row border border-success">
+          <div class="col-sm-6 border">
+            1 of 2 (col-sm-6)
+          </div>
+          <div class="col-8 border">
+            2 of 3 (col-8)
+          </div>
+          <div class="col-4 border">
+            1 of 3 (col-4)
+          </div>
+        </div>
+      </div>
+
+      <h2>Stack to horizontal</h2>
+      <div class="container text-center">
+        <div class="row border border-warning">
+          <div class="col-sm-8 border">col-sm-8</div>
+          <div class="col-sm-4 border">col-sm-4</div>
+        </div>
+        <div class="row border border-danger">
+          <div class="col-sm border">col-sm</div>
+          <div class="col-sm border">col-sm</div>
+          <div class="col-sm border">col-sm</div>
+        </div>
+      </div>
+
+      <h2>Nesting</h2>
+      <div class="container text-center">
+        <div class="row border border-2 border-danger">
+          <div class="col-sm-3 border">
+            Level 1: .col-sm-3
+          </div>
+          <div class="col-sm-9 border">
+            <div class="row border border-2 border-danger">
+              <div class="col-8 col-sm-6 border">
+                Level 2: .col-8 .col-sm-6
+              </div>
+              <div class="col-4 col-sm-6 border">
+                Level 2: .col-4 .col-sm-6
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>container-lg with Breakpoints</h2>
+      <div class="contaner-lg border border-danger">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 bg-danger">col-12 col-md-6 col-lg-3</div>
+            <div class="col-12 col-md-6 col-lg-3 bg-success">col-12 col-md-6 col-lg-3</div>
+            <div class="col-12 col-md-6 col-lg-3 bg-info">col-12 col-md-6 col-lg-3</div>
+            <div class="col-12 col-md-6 col-lg-3 bg-warning">col-12 col-md-6 col-lg-3</div>
+        </div>
+      </div>
+
+      <h2>container-lg with opacity</h2>
+      <div class="contaner-lg border border-danger">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 bg-danger bg-opacity-75">col-12 col-md-6 col-lg-3 bg-danger bg-opacity-75</div>
+            <div class="col-12 col-md-6 col-lg-3 bg-danger bg-opacity-50">col-12 col-md-6 col-lg-3 bg-danger bg-opacity-50</div>
+            <div class="col-12 col-md-6 col-lg-3 bg-danger bg-opacity-25">col-12 col-md-6 col-lg-3 bg-danger bg-opacity-25</div>
+            <div class="col-12 col-md-6 col-lg-3 bg-danger bg-opacity-10">col-12 col-md-6 col-lg-3 bg-danger bg-opacity-10</div>
+        </div>
+      </div>
+
+      <h2>justify content</h2>
+      <div class="container border border-success">
+        <div class="row justify-content-center">
+            <div class="col-6 bg-primary m-5 p-5">col-6 bg-primary m-5 p-5</div>
+          </div>
+      </div>
+
+      <h2>Justify Content Samples Flex-Direction (row) </h2>
+      <div class="container flexRow">
+        <div class="row d-flex justify-content-start jsstart">
+            <div class="col-2">d-flex justify-content-start</div>
+            <div class="col-2">d-flex justify-content-start</div>
+        </div>
+        <div class="row d-flex justify-content-end jsend">
+            <div class="col-2">d-flex justify-content-end</div>
+            <div class="col-2">d-flex justify-content-end</div>
+        </div>
+        <div class="row d-flex justify-content-center jscenter">
+            <div class="col-2">d-flex justify-content-center
+            </div>
+            <div class="col-2">d-flex justify-content-center
+            </div>
+        </div>
+        <div class="row d-flex justify-content-between jsbetween">
+            <div class="col-2">d-flex justify-content-between
+            </div>
+            <div class="col-2">d-flex justify-content-between
+            </div>
+        </div>
+        <div class="row d-flex justify-content-around jsaround">
+            <div class="col-2">d-flex justify-content-around
+            </div>
+            <div class="col-2">d-flex justify-content-around
+            </div>
+        </div>
+        <div class="row d-flex justify-content-evenly jsevenly">
+            <div class="col-2">d-flex justify-content-evenly
+            </div>
+            <div class="col-2">d-flex justify-content-evenly
+            </div>
+        </div>
+      </div>
+
+      <h2>Flex-Direction (Row) with align-items</h2>
+      <div class="container flexRow">
+        <div class="row d-flex align-items-start alignStart">
+            <div class="col-2">d-flex align-items-start</div>
+            <div class="col-2">d-flex align-items-start</div>
+        </div>
+        <div class="row d-flex align-items-end alignEnd">
+            <div class="col-2">d-flex align-items-end</div>
+            <div class="col-2">d-flex align-items-end</div>
+        </div>
+        <div class="row d-flex align-items-center alignCenter">
+            <div class="col-2">d-flex align-items-center
+            </div>
+            <div class="col-2">d-flex align-items-center
+            </div>
+        </div>
+        <div class="row d-flex align-items-baseline alignBaseline">
+            <div class="col-2">d-flex align-items-baseline
+            </div>
+            <div class="col-2">d-flex align-items-baseline
+            </div>
+        </div>
+        <div class="row d-flex align-items-stretch alignStretch">
+            <div class="col-2">d-flex align-items-stretch
+            </div>
+            <div class="col-2">d-flex align-items-stretch
+            </div>
+        </div>
+      </div>
+
+      <h2>Flex-Direction (Row) with align-self</h2>
+      <div class="container alignSelf">
+        <div class="row d-flex align-items-start alignStart">
+            <div class="col-2">d-flex align-items-start</div>
+            <div class="col-2 align-self-end">d-flex align-self-end</div>
+        </div>
+        <div class="row d-flex align-items-end alignEnd">
+            <div class="col-2">d-flex align-items-end</div>
+            <div class="col-2 align-self-start">d-flex align-self-start</div>
+        </div>
+        <div class="row d-flex align-items-center alignCenter">
+            <div class="col-2">d-flex align-items-center
+            </div>
+            <div class="col-2 align-self-baseline">d-flex align-self-baseline
+            </div>
+        </div>
+        <div class="row d-flex align-items-baseline alignBaseline">
+            <div class="col-2">d-flex align-items-baseline
+            </div>
+            <div class="col-2 align-self-stretch">d-flex align-self-stretch
+            </div>
+        </div>
+        <div class="row d-flex align-items-stretch alignStretch">
+            <div class="col-2">d-flex align-items-stretch
+            </div>
+            <div class="col-2 align-self-center">d-flex align-self-center
+            </div>
+        </div>
+      </div>
+
+      <h2>Justify Content Samples Flex-Direction (Column) </h2>
+      <div class="container flexColumn">
+        <div class="row d-flex justify-content-start jsstart">
+            <div class="col-2">d-flex justify-content-start</div>
+            <div class="col-2">d-flex justify-content-start</div>
+        </div>
+        <div class="row d-flex justify-content-end jsend">
+            <div class="col-2">d-flex justify-content-end</div>
+            <div class="col-2">d-flex justify-content-end</div>
+        </div>
+        <div class="row d-flex justify-content-center jscenter">
+            <div class="col-2">d-flex justify-content-center
+            </div>
+            <div class="col-2">d-flex justify-content-center
+            </div>
+        </div>
+        <div class="row d-flex justify-content-between jsbetween">
+            <div class="col-2">d-flex justify-content-between
+            </div>
+            <div class="col-2">d-flex justify-content-between
+            </div>
+        </div>
+        <div class="row d-flex justify-content-around jsaround">
+            <div class="col-2">d-flex justify-content-around
+            </div>
+            <div class="col-2">d-flex justify-content-around
+            </div>
+        </div>
+        <div class="row d-flex justify-content-evenly jsevenly">
+            <div class="col-2">d-flex justify-content-evenly
+            </div>
+            <div class="col-2">d-flex justify-content-evenly
+            </div>
+        </div>
+      </div>
+
+      <h2>Flex-Direction (Column) with align-items</h2>
+      <div class="container flexColumn">
+        <div class="row d-flex align-items-start alignStart">
+            <div class="col-2">d-flex align-items-start</div>
+            <div class="col-2">d-flex align-items-start</div>
+        </div>
+        <div class="row d-flex align-items-end alignEnd">
+            <div class="col-2">d-flex align-items-end</div>
+            <div class="col-2">d-flex align-items-end</div>
+        </div>
+        <div class="row d-flex align-items-center alignCenter">
+            <div class="col-2">d-flex align-items-center
+            </div>
+            <div class="col-2">d-flex align-items-center
+            </div>
+        </div>
+        <div class="row d-flex align-items-baseline alignBaseline">
+            <div class="col-2">d-flex align-items-baseline
+            </div>
+            <div class="col-2">d-flex align-items-baseline
+            </div>
+        </div>
+        <div class="row d-flex align-items-stretch alignStretch">
+            <div class="col-2">d-flex align-items-stretch
+            </div>
+            <div class="col-2">d-flex align-items-stretch
+            </div>
+        </div>
+      </div>
+
+
+      
+
+      <h2>Columns with sample image and Breakpoints</h2>
+      <div class="contaner border border-danger">
+        <div class="row p-3">
+            <div class="col-sm-3 col-md-6">
+                <img src="https://picsum.photos/id/53/100" class="border border-secondary border-5 p-2 m-3 rounded-bottom-circle" alt="">
+            </div>
+            <div class="col-sm-3 col-md-6">
+                <img src="https://picsum.photos/id/54/100" class=" border border-warning border-5 p-2 m-3 rounded-start-pill" alt="">
+            </div>
+            <div class="col-sm-3 col-md-6">
+                <img src="https://picsum.photos/id/55/100" class=" border rounded-end-pill border-success border-5 p-2 m-3" alt="">
+            </div>
+            <div class="col-sm-3 col-md-6">
+                <img src="https://picsum.photos/id/58/100" class="border rounded-circle border-dark border-5 p-2 m-3" alt="">
+            </div>
+        </div>
+      </div>
+
+        <img src="https://picsum.photos/id/53/100" class="border border-secondary border-5 p-2 m-3 rounded-bottom-circle" alt="">
+        <img src="https://picsum.photos/id/54/100" class=" border border-warning border-5 p-2 m-3 rounded-start-pill" alt="">
+        <img src="https://picsum.photos/id/55/100" class=" border rounded-end-pill border-success border-5 p-2 m-3" alt="">
+        <img src="https://picsum.photos/id/56/100" class="border border-danger border-5 p-2 m-3 rounded-5 rounded-top-0" alt="">
+        <img src="https://picsum.photos/id/57/100" class="border rounded-start-3 border-info border-5 p-2 m-3 rounded-5" alt="">
+        <img src="https://picsum.photos/id/58/100" class="border rounded-circle border-dark border-5 p-2 m-3" alt="">
+        <img src="https://picsum.photos/id/59/100/200" class="border rounded-pill border-danger border-5 p-2 m-3" alt="...">
+
+        <!-- @ media notes
+          
+        // Small devices (landscape phones, 576px and up)
+        @media (min-width: 576px) { ... }
+
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) { ... }
+
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) { ... }
+
+        // X-Large devices (large desktops, 1200px and up)
+        @media (min-width: 1200px) { ... }
+
+        // XX-Large devices (larger desktops, 1400px and up)
+        @media (min-width: 1400px) { ... }
+        -->
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

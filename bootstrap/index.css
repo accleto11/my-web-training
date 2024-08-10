@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+h2 {
+    margin: 20px;
+}
+
+.gridActivity > div {
+    margin-bottom: 2px;
+    border: 1px solid black;
+} 
+
+.activity2 {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.activity2 > div {
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.brown {
+    background-color: brown;
+    height: 100px;
+}
+
+.yellow {
+    background-color: yellow;
+    height: 100px;
+}
+
+.violet {
+    background-color: violet;
+    height: 100px;
+}
+
+.pink {
+    background-color: pink;
+    height: 100px;
+}
+
+.yellow-extended {
+    background-color: yellow;
+    height: 200px;
+    margin-top: -100px;
+}
+
+.violet-extended {
+    background-color: violet;
+    height: 200px;
+    margin-top: -100px;
+}
+
+.yellow-green {
+    background-color: yellowgreen;
+    height: 100px;
+}
+
+.blue {
+    background-color: lightseagreen;
+    height: 200px;
+}
+
+.purple {
+    background-color: purple;
+    height: 200px;
+}
+
+.green {
+    background-color: green;
+    height: 100px;
+}
+
+
+.jsstart div, .alignStart div {
+    background-color: pink;
+}
+
+.jsend div, .alignEnd div{
+    background-color: orangered;
+}
+
+.jscenter div, .alignCenter div{
+    background-color: yellow;
+}
+
+.jsbetween div, .alignBaseline div{
+    background-color: violet;
+}
+
+.jsaround div, .alignStretch div{
+    background-color: green;
+}
+
+.jsevenly div{
+    background-color: brown;
+}
+
+.flexRow > div, .alignSelf > div{
+    margin: 3px auto;
+    padding: 2px;
+}
+
+.flexRow > div, .flexRow > div > div,
+.flexColumn > div, .flexColumn > div > div, .alignSelf > div, .alignSelf > div > div {
+    border: 1px solid black;
+}
+
+.flexRow > div, .alignSelf > div {
+    height: 200px;
+}
+
+.flexColumn > div {
+    flex-direction: column;
+    height: 200px;
+}
+
