@@ -28,6 +28,22 @@
             font-size: 18px;
             margin-top: 20px;
         }
+        .letter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            overflow: auto;
+            max-height: 200px;
+        }
+        .letter-button {
+            font-size: 20px;
+            margin: 5px;
+            padding: 10px;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -36,93 +52,9 @@
         <div class="hangman-image" id="hangmanImage"></div>
         <div class="word" id="wordDisplay"></div>
         <div class="letter-buttons mt-3" id="letterButtons"></div>
-        <div class="feedback" id="feedback"></div>
+        <div class="feedback" id="status"></div>
         <button class="btn btn-primary mt-3" onclick="resetGame()">Restart Game</button>
     </div>
-
-    <script>
-        const words = [
-            { korean: '안녕하세요', english: 'Hello' },
-            { korean: '감사합니다', english: 'Thank you' },
-            { korean: '학교', english: 'School' },
-            { korean: '커피', english: 'Coffee' },
-            { korean: '컴퓨터', english: 'Computer' },
-            { korean: '친구', english: 'Friend' },
-            { korean: '가족', english: 'Family' },
-            { korean: '마시다', english: 'Drink' },
-            { korean: '말하다', english: 'Speak' },
-            { korean: '보다', english: 'See' }
-        ];
-
-        let selectedWord = '';
-        let guessedLetters = [];
-        let maxAttempts = 6;
-        let attemptsLeft = maxAttempts;
-
-        function chooseRandomWord() {
-            const randomIndex = Math.floor(Math.random() * words.length);
-            selectedWord = words[randomIndex].korean;
-            guessedLetters = [];
-            attemptsLeft = maxAttempts;
-            updateDisplay();
-        }
-
-        function updateDisplay() {
-            const wordDisplay = document.getElementById('wordDisplay');
-            wordDisplay.innerHTML = selectedWord.split('').map(letter => 
-                guessedLetters.includes(letter) ? letter : '_'
-            ).join(' ');
-
-            const hangmanImage = document.getElementById('hangmanImage');
-            hangmanImage.style.backgroundImage = `url('images/hangman${maxAttempts - attemptsLeft}.png')`;
-            hangmanImage.style.backgroundSize = 'cover';
-            hangmanImage.style.backgroundPosition = 'center';
-
-            const feedback = document.getElementById('feedback');
-            feedback.textContent = `Attempts left: ${attemptsLeft}`;
-
-            if (!wordDisplay.textContent.includes('_')) {
-                feedback.textContent = 'Congratulations! You guessed the word!';
-                disableButtons();
-            }
-
-            if (attemptsLeft === 0) {
-                feedback.textContent = `Game over! The word was "${selectedWord}".`;
-                disableButtons();
-            }
-        }
-
-        function handleLetterClick(letter) {
-            if (!guessedLetters.includes(letter)) {
-                guessedLetters.push(letter);
-                if (!selectedWord.includes(letter)) {
-                    attemptsLeft--;
-                }
-                updateDisplay();
-            }
-        }
-
-        function disableButtons() {
-            const buttons = document.querySelectorAll('.letter-button');
-            buttons.forEach(button => button.disabled = true);
-        }
-
-        function resetGame() {
-            chooseRandomWord();
-            const letterButtons = document.getElementById('letterButtons');
-            letterButtons.innerHTML = '';
-            for (let i = 0; i < 19; i++) {
-                const letter = String.fromCharCode(12593 + i); // Korean Hangul Unicode range
-                const button = document.createElement('button');
-                button.className = 'btn btn-secondary letter-button';
-                button.textContent = letter;
-                button.onclick = () => handleLetterClick(letter);
-                letterButtons.appendChild(button);
-            }
-            updateDisplay();
-        }
-
-        window.onload = resetGame;
-    </script>
+    <script src="../js/hangman.js"></script>
 </body>
 </html>

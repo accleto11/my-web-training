@@ -30,22 +30,33 @@ function initializeGame() {
 function updateLetterButtons() {
     const letterButtons = document.getElementById('letterButtons');
     letterButtons.innerHTML = '';
-    for (let i = 0; i < 26; i++) {
-        const letter = String.fromCharCode(65 + i);
+
+    // Basic Consonants
+    const consonants = ['ㄱ', 'ㄴ', 'ㄷ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅅ', 'ㅇ', 'ㅈ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ'];
+    consonants.forEach(letter => {
         const button = document.createElement('button');
         button.textContent = letter;
-        button.className = 'btn btn-secondary';
+        button.className = 'btn btn-secondary letter-button';
         button.onclick = () => guessLetter(letter);
         letterButtons.appendChild(button);
-    }
+    });
+
+    // Basic Vowels
+    const vowels = ['ㅏ', 'ㅐ', 'ㅑ', 'ㅒ', 'ㅓ', 'ㅔ', 'ㅕ', 'ㅖ', 'ㅗ', 'ㅘ', 'ㅙ', 'ㅚ', 'ㅛ', 'ㅜ', 'ㅝ', 'ㅞ', 'ㅟ', 'ㅠ', 'ㅡ', 'ㅢ', 'ㅣ'];
+    vowels.forEach(letter => {
+        const button = document.createElement('button');
+        button.textContent = letter;
+        button.className = 'btn btn-secondary letter-button';
+        button.onclick = () => guessLetter(letter);
+        letterButtons.appendChild(button);
+    });
 }
 
 function updateHangmanImage() {
-    document.getElementById('hangmanImage').src = `hangman${incorrectGuesses}.png`;
+    document.getElementById('hangmanImage').src = `images/hangman${incorrectGuesses}.png`;
 }
 
 function guessLetter(letter) {
-    letter = letter.toLowerCase();
     const isCorrectGuess = selectedWord.includes(letter);
 
     if (isCorrectGuess) {
