@@ -95,3 +95,7 @@ const canvas = document.getElementById('canvas');
 
         // Initialize the game
         drawWord(questions[currentQuestionIndex].word);
+
+        
+        
+
