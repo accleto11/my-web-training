@@ -3,122 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Korean Alphabets with Drawing Canvas</title>
+    <title>Draw Korean Alphabets</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .canvas-cell {
-            width: 100px;
-            height: 100px;
-            position: relative;
-        }
-        canvas {
-            border: 1px solid #ccc;
-            width: 100%;
-            height: 100%;
-            background-color: white; /* Ensure the canvas background is white */
-        }
-
-    </style>
+    <link rel="stylesheet" href="../css/tryit.css">
 </head>
 <body>
-    <div class="container my-5">
-        <a href="../pages/index.html">back to home</a>
-        <h1>Korean Alphabets with Drawing Canvas</h1>
-        <table class="table table-dark table-hover">
+    <div class="controls fixed-top">
+        <a class="btn btn-success control-button" href="../pages/index.html">Back to Home</a>
+        <button class="btn btn-primary control-button" id="clearAllCanvases">Clear All Canvases</button>
+        <button class="btn btn-secondary control-button" id="eraserMode">Eraser Mode</button>
+    </div>
+    <div class="container">
+        <table class="table table-dark table-hover writeit-table">
             <thead>
                 <tr>
                     <th>Korean Alphabet</th>
-                    <th>English Sound</th>
-                    <th>Pronunciation Example</th>
-                    <th>Draw Here</th>
+                    <th>ㅏ</th>
+                    <th>ㅑ</th>
+                    <th>ㅓ</th>
+                    <th>ㅕ</th>
+                    <th>ㅗ</th>
+                    <th>ㅛ</th>
+                    <th>ㅜ</th>
+                    <th>ㅠ</th>
+                    <th>ㅡ</th>
+                    <th>ㅣ</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>ㄱ</td>
-                    <td>g (initial) / k (final)</td>
-                    <td>as in gold / kit</td>
-                    <td class="canvas-cell"><canvas id="canvas-ㄱ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄱ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄱ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄱ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄱ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄱ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄱ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄱ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄱ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄱ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄱ-ㅣ" width="100" height="100"></canvas></td>
                 </tr>
                 <tr>
                     <td>ㄴ</td>
-                    <td>n</td>
-                    <td>as in now</td>
-                    <td class="canvas-cell"><canvas id="canvas-ㄴ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄴ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄴ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄴ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄴ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄴ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄴ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄴ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄴ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄴ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄴ-ㅣ" width="100" height="100"></canvas></td>
                 </tr>
-                <!-- Add other rows as needed -->
+                <tr>
+                    <td>ㄷ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄷ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄷ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄷ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄷ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄷ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄷ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄷ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄷ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄷ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄷ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㄹ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄹ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄹ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄹ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄹ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄹ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄹ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄹ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄹ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄹ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㄹ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㅁ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅁ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅁ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅁ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅁ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅁ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅁ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅁ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅁ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅁ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅁ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㅂ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅂ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅂ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅂ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅂ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅂ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅂ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅂ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅂ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅂ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅂ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㅅ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅅ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅅ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅅ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅅ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅅ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅅ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅅ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅅ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅅ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅅ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㅇ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅇ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅇ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅇ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅇ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅇ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅇ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅇ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅇ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅇ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅇ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㅈ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅈ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅈ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅈ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅈ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅈ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅈ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅈ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅈ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅈ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅈ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㅊ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅊ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅊ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅊ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅊ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅊ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅊ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅊ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅊ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅊ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅊ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㅋ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅋ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅋ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅋ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅋ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅋ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅋ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅋ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅋ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅋ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅋ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㅌ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅌ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅌ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅌ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅌ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅌ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅌ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅌ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅌ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅌ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅌ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㅍ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅍ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅍ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅍ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅍ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅍ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅍ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅍ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅍ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅍ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅍ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
+                <tr>
+                    <td>ㅎ</td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅎ-ㅏ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅎ-ㅑ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅎ-ㅓ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅎ-ㅕ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅎ-ㅗ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅎ-ㅛ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅎ-ㅜ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅎ-ㅠ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅎ-ㅡ" width="100" height="100"></canvas></td>
+                    <td class="canvas-cell"><canvas id="canvas-ㅎ-ㅣ" width="100" height="100"></canvas></td>
+                </tr>
             </tbody>
         </table>
-        <div class="controls my-3">
-            <button class="btn btn-primary" id="clearCanvas">Clear Canvas</button>
-            <button class="btn btn-secondary" id="toggleMode">Toggle Eraser</button>
-        </div>
-    </div>
+        
+        
 
     <script>
-        let eraseMode = false;
+        document.addEventListener('DOMContentLoaded', () => {
+            let eraserMode = false;
 
-        function setupCanvas(canvasId) {
-            const canvas = document.getElementById(canvasId);
-            const ctx = canvas.getContext('2d');
-            let painting = false;
-
-            function startPosition(e) {
-                painting = true;
-                draw(e);
-            }
-
-            function endPosition() {
-                painting = false;
-                ctx.beginPath();
-            }
-
-            function draw(e) {
-                if (!painting) return;
-
-                const rect = canvas.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-
-                ctx.lineWidth = eraseMode ? 10 : 2;
-                ctx.lineCap = 'round';
-                ctx.strokeStyle = eraseMode ? 'white' : 'black'; // Change color based on mode
-
-                ctx.lineTo(x, y);
-                ctx.stroke();
-                ctx.beginPath();
-                ctx.moveTo(x, y);
-            }
-
-            canvas.addEventListener('mousedown', startPosition);
-            canvas.addEventListener('mouseup', endPosition);
-            canvas.addEventListener('mousemove', draw);
-            canvas.addEventListener('mouseleave', endPosition);
-            canvas.addEventListener('touchstart', (e) => {
-                e.preventDefault();
-                startPosition(e.touches[0]);
-            });
-            canvas.addEventListener('touchend', endPosition);
-            canvas.addEventListener('touchmove', (e) => {
-                e.preventDefault();
-                draw(e.touches[0]);
-            });
-        }
-
-        document.querySelectorAll('canvas').forEach(canvas => {
-            setupCanvas(canvas.id);
-        });
-
-        document.getElementById('clearCanvas').addEventListener('click', () => {
-            document.querySelectorAll('canvas').forEach(canvas => {
+            // Function to initialize canvas elements
+            function initializeCanvas(canvas) {
                 const ctx = canvas.getContext('2d');
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-            });
-        });
+                let isDrawing = false;
 
-        document.getElementById('toggleMode').addEventListener('click', () => {
-            eraseMode = !eraseMode;
-            document.getElementById('toggleMode').textContent = eraseMode ? 'Switch to Draw Mode' : 'Switch to Erase Mode';
+                canvas.addEventListener('mousedown', (e) => {
+                    isDrawing = true;
+                    ctx.beginPath();
+                    ctx.moveTo(e.offsetX, e.offsetY);
+                });
+
+                canvas.addEventListener('mousemove', (e) => {
+                    if (isDrawing) {
+                        if (eraserMode) {
+                            ctx.clearRect(e.offsetX - 5, e.offsetY - 5, 10, 10);
+                        } else {
+                            ctx.lineTo(e.offsetX, e.offsetY);
+                            ctx.stroke();
+                        }
+                    }
+                });
+
+                canvas.addEventListener('mouseup', () => {
+                    isDrawing = false;
+                });
+
+                canvas.addEventListener('mouseleave', () => {
+                    isDrawing = false;
+                });
+            }
+
+            // Initialize all canvas elements
+            document.querySelectorAll('canvas').forEach(canvas => {
+                initializeCanvas(canvas);
+            });
+
+            // Clear all canvases
+            document.getElementById('clearAllCanvases').addEventListener('click', () => {
+                document.querySelectorAll('canvas').forEach(canvas => {
+                    const ctx = canvas.getContext('2d');
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                });
+            });
+
+            // Toggle eraser mode
+            document.getElementById('eraserMode').addEventListener('click', () => {
+                eraserMode = !eraserMode;
+                document.getElementById('eraserMode').textContent = eraserMode ? 'Drawing Mode' : 'Eraser Mode';
+            });
         });
     </script>
 </body>
