@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "google fonts";
+}
+
+header {
+    display: flex;
+    text-align: center;
+    justify-content:space-between;
+    padding: 10px;
+}
+
+.main-wrapper {
+    background-color: rgb(212, 4, 91);
+}
+
+.jumbotron {
+    text-align: center;
+    color: white;
+}
+
+.joinBtn {
+    padding: 10px;
+    font-size: 2rem;
+    width: 300px;
+}
+
+.joinBtn svg {
+    margin-right: 10px;
+}
