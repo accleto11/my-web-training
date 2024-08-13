@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript Sample Project</title>
+    <title>Javascript Practice</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div class="container">
+        <div class="box">
+            <h2>Simple Calculator</h2>
+            <form id="form1">
+                Value 1: <input type="text" id="value1">
+                Value 2: <input type="text" id="value2">
+                Operator: 
+                <select id="ope">
+                    <option value="add">Add</option>
+                    <option value="sub">Subtract</option>
+                    <option value="mul">Multiply</option>
+                    <option value="div">Divide</option>
+                </select>
+                <textarea name="" id="answer" readonly></textarea>
+                <button type="button" id="compute">Calculate</button>
+                <button type="button" id="resetCalc">Reset</button>
+            </form>
+        </div>
+        <div class="box">
+            <h2>Check if you are allowed to enter. </h2>
+        <form id="form2">
+            Name: <input type="text" name="" id="name">
+            Age: <input type="text" name="" id="age">
+            <button type="button" id="enter">Enter</button>
+            <button type="button" id="reset">Reset</button>
+        </form>
+
+        <div class="message" id="message"></div>
+        </div> 
+
+        <!-- check if customer's name is on the list -->
+
+        <div class="box">
+            <h2>Check if your name is on the list.</h2>
+            <form id="form3">
+                First Name: <input type="text" name="" id="customerName">
+                Last Name: <input type="text" name="" id="customerLastName">
+                <button type="button" id="check">Check Name</button>
+                <button type="button" id="checkReset">Reset</button>
+            </form>
     
+            <div class="message" id="messageBox"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
