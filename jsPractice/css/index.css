@@ -29,7 +29,7 @@
     height: 300px;
 }
 
-.vocabsBuilder input {
+.vocabsBuilder input, .greetMeBox input {
     font-size: 1.2rem;
     padding: 5px;
 }
@@ -43,7 +43,7 @@ button {
     cursor: pointer;
 }
 
-/*  */
+/* Vocabs builder*/
 
 .vocabsBuilder {
     display: flex;
@@ -53,10 +53,17 @@ button {
     background: linear-gradient(15deg, rgb(235, 211, 211), rgb(63, 57, 57), gray)
 }
 
-#answerBox {
+#answerBox, .greetingBox {
     border: 1px solid black;
     height: 60px;
     width: 100%;
     padding: 5px;
     font-size: 1.3rem;
+}
+
+/* greetings */
+
+.greetMeBox {
+    height: 400px;
+    background: linear-gradient(15deg, rgb(235, 211, 211), rgb(63, 57, 57), gray)
 }
