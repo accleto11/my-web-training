@@ -21,6 +21,7 @@ function greetMeToday() {
     let period = hourOfDay >= 12 ? 'PM' : 'AM';
     let hourIn12HrFormat = hourOfDay % 12 || 12; //convert 0 hour to 12 for pm/am
     
+    if (isNaN(name) && name.length > 0) {
     if (hourOfDay >= 4 && hourOfDay < 12) {
         greeting = `Good morning, ${name}! Today's date is ${month} ${day}, ${year} and the time is ${hourIn12HrFormat}:${minutes < 10 ? '0' + minutes : minutes}${period}.`;
     } else if (hourOfDay >= 12 && hourOfDay <= 18) {
@@ -29,6 +30,9 @@ function greetMeToday() {
         greeting = `Good evening, ${name}! Today's date is ${month} ${day}, ${year} and the time is ${hourIn12HrFormat}:${minutes < 10 ? '0' + minutes : minutes}${period}.`;
     }
     greetingBox.textContent = `${greeting}`;
+} else {
+    greetingBox.textContent = `Please enter your name!`;
+}
 }
 
 greetBtn.addEventListener('click', greetMeToday);
