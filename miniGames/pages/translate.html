@@ -37,8 +37,9 @@
               </div>
             </div>
           </nav>
-    <main class="container">
-            <div class="box vocabsBuilder">
+          <main class="container">
+            <div class="container d-flex phrase-wrapper">
+              <div class="vocabsBuilder">
                 Korean Phrase: <input type="text" name="" id="phrase" readonly>
                 English Meaning: <input type="text" name="" id="meaning">
                 <button type="button" id="startBtn">Start | Next</button>
@@ -47,10 +48,14 @@
                 <div id="answerBox"></div>
             </div>
             <div class="scoreBoard">
-                <h2>Question #<span id="qIndex"></span></h2>
-                <h2>Score: <span id="score"></span></h2>
+                <div>Question #<span id="qIndex"></span></div>
+                <div>Score: <span id="score"></span></div>
+            </div>
             </div>
         </main>
+        <footer>
+          <p id="footerCredits">&copy; Made with &hearts; by AcCleto. 2024 - </p>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../Js/phrases.js"></script>

@@ -59,3 +59,7 @@ startBtn.addEventListener('click', vocabsBuilder);
 checkBtn.addEventListener('click', checkMeaning);
 resetPhrase.addEventListener('click', resetPhrases);
 
+// footer
+const footerCredits = document.getElementById("footerCredits");
+const currentYear = new Date().getFullYear();
+footerCredits.textContent += `${currentYear}`;
