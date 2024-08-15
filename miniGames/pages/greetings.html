@@ -5,60 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Applications</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/phrases.css
-    ">
+    <link rel="stylesheet" href="../css/phrases.css">
 </head>
 <body>
-    <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="../images/myLogo.png" alt="my sample website logo">
-                      </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid d-flex flex-column">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../images/myLogo.png" alt="my sample website logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="../pages/index.html">Home</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Mini Apps
-                        </a>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="../pages/greetings.html">Today's Date</a></li>
-                          <li><a class="dropdown-item" href="../pages/translate.html">Korean-English</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                      </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../pages/index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Mini Apps
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../pages/greetings.html">Today's Date</a></li>
+                                <li><a class="dropdown-item" href="../pages/translate.html">Korean-English</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                  </div>
                 </div>
-              </nav>
-        <main class="container">
-        <div class="container d-flex flex-column">
-            <div class="box greetMeBox my-3">
-                <h3>Enter your name and I'll tell you today's date and time: </h3>
-                <input type="text" name="" id="name">
-                <button type="button" id="greetBtn">Enter</button>
-                <button type="button" id="resetgreetBtn">Reset</button>
             </div>
-            <div id="greetingBox"></div>
-        </div>
-        <div class="container d-flex flex-column">
-          <div class="box greetMeBox my-3">
-              <h3>Enter your name and I'll tell you today's date and time: </h3>
-              <input type="text" name="" id="name">
-              <button type="button" id="greetBtn">Enter</button>
-              <button type="button" id="resetgreetBtn">Reset</button>
-          </div>
-          <div id="greetingBox"></div>
-      </div>
+        </nav>
+        <main class="container">
+            <div class="container d-flex flex-column greetings-wrapper">
+                <div class="box greetMeBox my-3">
+                    <h3>Enter your name and I'll tell you today's date and time: </h3>
+                    <input type="text" name="" id="name">
+                    <button type="button" id="greetBtn">Enter</button>
+                    <button type="button" id="resetgreetBtn">Reset</button>
+                </div>
+                <div id="greetingBox"></div>
+            </div>
+            <div class="container d-flex flex-column greetings-wrapper">
+                <div class="box greetMeBox my-3">
+                    <h3>Enter a number to check if it is odd/even: </h3>
+                    <input type="text" name="" id="num">
+                    <button type="button" id="enterNum">Enter</button>
+                    <button type="button" id="numResetBtn">Reset</button>
+                </div>
+                <div id="numberBox"></div>
+            </div>
         </main>
-        <footer></footer>
+        <footer>
+            <p id="footerCredits">&copy; Made with &hearts; by AcCleto. 2024 - </p>
+        </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="../Js/greetings.js"></script>
