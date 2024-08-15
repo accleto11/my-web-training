@@ -101,7 +101,7 @@ main {
     text-align: center;
 }
 
-button {
+button:not([id="submitAnswers"]) {
     background-color: rgb(194, 2, 2);
     border-radius: 5px;
     color: white;
@@ -121,10 +121,10 @@ button:disabled {
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    height: 400px;
+    height: 420px;
     font-size: 1.2rem;
-    padding: 10px;
-    width: 80%;
+    padding: 20px;
+    width: 60%;
     text-align: center;
     align-items: center;
     border-radius: 10px;
@@ -161,6 +161,59 @@ button:disabled {
     /* box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.8), 0px 6px 6px rgba(0, 0, 0, 0.4); */
 }
 
+
+
+/* multiple choice quiz */
+
+.multipleChoice {
+    flex-direction: column;
+    height: auto;
+    margin-top: 60px;
+    padding: 20px;
+}
+
+#quiz {
+    margin: 20px auto;
+    padding: 30px;
+    width: 80%;
+    box-shadow: 0px 10px 20px rgba(252, 251, 251, 0.1), 0px 6px 6px rgba(248, 242, 242, 0.5);
+}
+
+#quiz input {
+    margin: 10px;
+    font-size: 2rem;
+}
+
+.multipleChoice button {
+    background-color: rgb(194, 2, 2);
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    width: 40%;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px auto;
+}
+
+#quiz h2, #quiz h1 {
+    margin: 30px auto;
+}
+
+#quizScore {
+    font-size: 1.3rem;
+    margin: 15px auto;
+    border-radius: 10px;
+    padding: 5px;
+    height: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+
 @media screen and (max-width: 768px){
     main {
         flex-direction: column;
@@ -193,4 +246,3 @@ button:disabled {
         margin-top: 10px;
     }
 }
-

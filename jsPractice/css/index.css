@@ -67,3 +67,10 @@ button {
     height: 400px;
     background: linear-gradient(15deg, rgb(235, 211, 211), rgb(63, 57, 57), gray)
 }
+
+.sampleBox {
+    flex-direction: column;
+    height: 200px;
+    background: linear-gradient(15deg, rgb(235, 211, 211), rgb(63, 57, 57), gray);
+    padding: 10px;
+}
