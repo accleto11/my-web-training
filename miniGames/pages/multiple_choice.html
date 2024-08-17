@@ -11,7 +11,7 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="../pages/index.html">
                     <img src="../images/myLogo.png" alt="my sample website logo">
                   </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,37 +27,27 @@
                       Mini Apps
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="../pages/greetings.html">Today's Date</a></li>
-                        <li><a class="dropdown-item" href="../pages/translate.html">Korean-English</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="../pages/multiple_choice.html">Multiple Choice Quiz</a></li>
-                      </ul>
+                      <li><a class="dropdown-item" href="../pages/greetings.html">Today's Date</a></li>
+                      <li><a class="dropdown-item" href="../pages/translate.html">Korean-English</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="../pages/multiple_choice.html">Multiple Choice Quiz</a></li>
+                    </ul>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
-          <main class="container">
-            <div class="container d-flex phrase-wrapper">
-              <div class="vocabsBuilder">
-                Korean Phrase: <input type="text" name="" id="phrase" readonly>
-                English Meaning: <input type="text" name="" id="meaning">
-                <button type="button" id="startBtn">Start | Next</button>
-                <button type="button" id="checkPhrase">Check | Clue</button>
-                <button type="button" id="resetPhrase">Reset Game</button>
-                <div id="answerBox"></div>
-            </div>
-            <div class="scoreBoard">
-                <div>Question #<span id="qIndex"></span></div>
-                <div>Score: <span id="score"></span></div>
-            </div>
-            </div>
-        </main>
-        <footer>
-          <p id="footerCredits">&copy; Made with &hearts; by AcCleto. 2024 - </p>
-        </footer>
+          <main class="container multipleChoice">
+            <div id="quiz"></div>
+            <button type="button" onclick="submitAnswers()" id="submitAnswers">Submit All Answers</button>
+            <button type="button" onclick="resetQuiz()" id="resetAnswers">Reset Quiz</button>
+            <div id="quizScore"></div>
+          </main>
+          <footer>
+            <p id="footerCredits">&copy; Made with &hearts; by AcCleto. 2024 - </p>
+          </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../Js/phrases.js"></script>
+    <script src="../Js/multiple_choice.js"></script>
 </body>
 </html>
