@@ -74,3 +74,25 @@ button {
     background: linear-gradient(15deg, rgb(235, 211, 211), rgb(63, 57, 57), gray);
     padding: 10px;
 }
+
+.guessBox {
+    flex-direction: column;
+    height: 300px;
+    padding: 10px;
+    margin-top: 50px;
+    background: linear-gradient(15deg, rgb(235, 211, 211), rgb(63, 57, 57), gray);
+    padding: 10px;
+}
+
+.guessBox input {
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.showResultLoop {
+    font-size: 1.2rem;
+    color: red;
+    height: 30px;
+    text-align: center;
+    border: 1px solid black;
+}

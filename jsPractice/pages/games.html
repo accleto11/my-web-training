@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="../css/games.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="game-container">
+            <h1>Hangman Game</h1>
+            <div id="timer" class="timer">Time left: 30s</div>
+            <label for="categorySelector">Select Category:</label>
+            <select id="categorySelector">
+                <option value="animals">Animals</option>
+                <option value="fruits">Fruits</option>
+                <option value="countries">Countries</option>
+            </select>
+            <div id="displayWord" class="word-display">_ _ _ _ _ _ _</div>
+            <input type="text" id="inputField" maxlength="1" placeholder="Enter a letter">
+            <button id="guessButton">Guess</button>
+            <button id="resetButton">Reset Game</button>
+            <div id="messageBox" class="message"></div>
+        </div>
+        <div class="game-container1">
+            <h2>Guess the Number As Fast As You Can! (1-100)</h2>
+            <div id="timer1" class="timer">Time left: 30s</div>
+            <input type="text" id="inputField1" placeholder="Enter a number">
+            <button id="guessButton1">Guess</button>
+            <button id="resetButton1">Reset Game</button>
+
+            <div id="messageBox1" class="message"></div>
+        </div>
+    </div>
+    <script src="../js/games.js"></script>
+</body>
+</html>
